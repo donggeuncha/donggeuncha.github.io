@@ -48,6 +48,25 @@
 
       </header>
 
+      {% if site.resume_section_business_area %}
+      <!-- begin Business Area -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Business Area</h2>
+        </header>
+
+        <div class="resume-item">
+          <ul class="resume-item-list">
+            {% for interest in site.data.business_area %}
+            <li>{{ interest.description }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </section>
+      <!-- end Business Area -->
+      {% endif %}
+
       {% if site.resume_section_research_interests %}
       <!-- begin Research Interests -->
       <section class="content-section">
